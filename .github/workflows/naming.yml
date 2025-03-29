@@ -2,6 +2,7 @@ name: Naming
 on: push
 jobs:
   print:
+    if: ${{github.actor == 'octocat'}}
     name: Super Useful Job
     runs-on: ubuntu-latest
     steps:

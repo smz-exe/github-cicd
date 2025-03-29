@@ -3,6 +3,7 @@ run-name: Run by @${{github.actor}}
 on: push
 jobs:
   print:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello"

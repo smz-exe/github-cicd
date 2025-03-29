@@ -2,6 +2,7 @@ name: GITHUB_OUTPUT
 on: push
 jobs:
   share:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     steps:
       - id: source

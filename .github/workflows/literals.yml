@@ -2,6 +2,7 @@ name: Literals
 on: push
 jobs:
   print:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     steps:
       - run: printenv | grep 'LITERAL_'

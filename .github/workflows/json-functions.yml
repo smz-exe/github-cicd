@@ -2,6 +2,7 @@ name: JSON functions
 on: push
 jobs:
   dump:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     steps:
       - run: echo "${CONTEXT}"

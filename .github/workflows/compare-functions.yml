@@ -2,6 +2,7 @@ name: Compare functions
 on: push
 jobs:
   compare:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     steps:
       - run: printenv | grep '_FUNC'

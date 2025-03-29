@@ -2,6 +2,7 @@ name: Environment variables
 on: push
 jobs:
   run:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     env:
       BRANCH: main

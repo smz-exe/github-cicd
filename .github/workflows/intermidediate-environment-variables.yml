@@ -2,6 +2,7 @@ name: Intermediate environment variables
 on: push
 jobs:
   print:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     env:
       ACTOR: ${{github.actor}}

@@ -2,6 +2,7 @@ name: Variables
 on: push
 jobs:
   print:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     env:
       USERNAME: ${{vars.USERNAME}}

@@ -2,6 +2,7 @@ name: GITHUB_ENV
 on: push
 jobs:
   share:
+    if: ${{github.actor == 'octocat'}}
     runs-on: ubuntu-latest
     steps:
       - run: echo "RESULT=hello">>"${GITHUB_ENV}"
